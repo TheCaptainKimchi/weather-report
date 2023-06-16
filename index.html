@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather Report</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="./assets/images/star-logo.png" />
+        <h2>WeatherReport</h2>
+      </div>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+      </ul>
+    </header>
+    <main id="main">
+      <section class="content">
+        <div class="content__card">
+          <p class="content__title">- Quote of the day -</p>
+          <div class="content__text">
+            <h3 class="content__text-quote"></h3>
+            <p class="content__text-author"></p>
+          </div>
+          <form class="content__form">
+            <p>Enter location</p>
+            <input type="text" name="location" />
+            <button>Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <h3 class="footer__title">Contact</h3>
+      <div class="footer__contact">
+        <div class="footer__contact-icons">
+          <a
+            class="footer__contact-icon footer__contact-icon--linked-in"
+            href="https://www.linkedin.com/in/raulcalero/"
+            ><img src="./assets/icons/linked-in-icon.svg"
+          /></a>
+          <a
+            class="footer__contact-icon footer__contact-icon--github"
+            href="https://github.com/TheCaptainKimchi"
+            ><img src="./assets/icons/github-icon.svg"
+          /></a>
+          <a
+            class="footer__contact-icon footer__contact-icon--email"
+            href="mailto:raulcalero7@gmail.com"
+            ><img src="./assets/icons/mail-icon.svg"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <div class="stand-image"></div>
+    <canvas id="bg"> </canvas>
+    <script src="./scripts/quotes.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
