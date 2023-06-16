@@ -11,7 +11,7 @@
     <header class="header">
       <div class="header__logo">
         <img src="./assets/images/star-logo.png" />
-        <h2>WeatherReport</h2>
+        <h2>Weather Report</h2>
       </div>
       <ul>
         <li>Home</li>
@@ -21,15 +21,14 @@
     <main id="main">
       <section class="content">
         <div class="content__card">
-          <p class="content__title">- Quote of the day -</p>
           <div class="content__text">
             <h3 class="content__text-quote"></h3>
             <p class="content__text-author"></p>
           </div>
           <form class="content__form">
-            <p>Enter location</p>
-            <input type="text" name="location" />
-            <button>Submit</button>
+            <p>Enter location to get weather</p>
+            <input type="text" value="Enter Location" name="location" />
+            <button class="content__button pulse">Submit</button>
           </form>
         </div>
       </section>
@@ -57,8 +56,9 @@
       </div>
     </footer>
     <div class="stand-image"></div>
-    <canvas id="bg"> </canvas>
+    <canvas id="bg"></canvas>
     <script src="./scripts/quotes.js"></script>
-    <script src="./scripts/main.js"></script>
+    <script src="./scripts/parallax.js"></script>
+    <script src="./scripts/buttonListener.js"></script>
   </body>
 </html>

@@ -100,7 +100,7 @@ canvas#bg {
 	&__card {
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-evenly;
 		flex-direction: column;
 		position:relative;
 		border-radius:15px;
@@ -126,7 +126,7 @@ canvas#bg {
 
 		.content__title {
 			margin: 0;
-			padding-bottom: 0.5rem;
+			padding: 0.5rem;
 		}
 
 		.content__text {
@@ -148,9 +148,79 @@ canvas#bg {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			margin-top: 2rem;
+			margin-top: 0.5rem;
 		}
 	  }
+}
+
+// +++++++ RELOADED CARD +++++++
+.content__weather {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		flex-direction: column;
+		position:relative;
+		border-radius:15px;
+		width:300px;
+		height:400px;
+		text-align:center;
+		color: #252B37;
+		background-color: #151823;
+		@include backlight(0, 5vw, 5vw, 0.85, #0fffc1, #7e0fff, 10s);
+		animation: textColor 10s ease infinite;
+		
+		@keyframes textColor {
+		  0% {
+			color: #7e0fff;
+		  }
+		  50% {
+			color: #0fffc1;
+		  }
+		  100% {
+			color: #7e0fff;
+		  }
+		}
+
+		.card__top {
+			display: flex;
+			justify-content: space-evenly;
+			width: 80%;
+			border: 1px silver solid;
+			border-radius: 10px;
+			.card__icon {
+				display: flex;
+				align-items: center;
+				img {
+					width: 75px;
+					height: 75px;
+					border-radius: 50%;
+				}
+			}
+		}
+		.card__bottom {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			h3, p {
+				margin: 0;
+			}
+
+			h3 {
+				font-size: 1rem;
+				margin: 1rem;
+			}
+
+			p {
+				margin-top: 0.5rem;
+			}
+			.card__indexes {
+				display: flex;
+				p {
+					margin: 1rem 0.5rem 0 0.5rem;
+				}
+			}
+		}
 }
 
 // ======================================
@@ -218,5 +288,59 @@ canvas#bg {
 	width: 100%;
 	background-position: center;
 	background-size: cover;
+}
+
+// ======================================
+// ============ PULSE STYLE =============
+// ======================================
+
+
+// Animate the size, outside
+.pulse:hover, 
+.pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--hover); }
+}
+
+//=== Set button colors
+// If you wonder why use Sass vars or CSS custom properties...
+  // Make a map with the class names and matching colors
+$colors: (
+  pulse: white, 
+);
+
+// Sass variables compile to a static string; CSS variables are dynamic and inherited
+  // Loop through the map and set CSS custom properties using Sass variables
+@each $button, $color in $colors {
+  .#{$button} {
+    --color: #{$color};
+    --hover: #{adjust-hue($color, 45deg)};
+  }
+}
+
+// Now every button will have different colors as set above. We get to use the same structure, only changing the custom properties.
+button {  
+  color: var(--color);
+  transition: 0.25s;
+  
+  &:hover,
+  &:focus { 
+    border-color: var(--hover);
+    color: #fff;
+  }
+}
+
+// Basic button styles
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin-top: 0.75rem;
+  padding: 0.6rem 1.5rem;
 }
 
