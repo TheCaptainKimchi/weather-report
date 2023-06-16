@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/about.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather Report</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="../assets/images/star-logo.png" />
+        <h2>Weather Report</h2>
+      </div>
+      <ul>
+        <a href="../index.html"
+          ><li class="header__list header__list--active">Home</li></a
+        >
+        <a href="./about.html"
+          ><li class="header__list header__list--inactive">About</li></a
+        >
+      </ul>
+    </header>
+    <main id="main">
+      <section class="content">
+        <div class="content__card">
+          <h2 class="content__title">About Weather Report</h2>
+          <p class="content__text">
+            Introducing Weather Report, an innovative and user-friendly web
+            application designed to provide you with real-time weather updates
+            and forecasts at your fingertips. With its sleek and intuitive
+            interface, Weather Report seamlessly combines accurate
+            meteorological data and visually appealing graphics to deliver a
+            comprehensive weather experience. Whether you're planning a weekend
+            getaway, checking the daily forecast, or simply curious about the
+            current weather conditions, Weather Report has you covered. Stay
+            informed about temperature, humidity, wind speed, and precipitation
+            trends in your location, or explore forecasts for any city worldwide
+            with just a few clicks. With personalized notifications and
+            customizable widgets, Weather Report ensures that you never miss a
+            weather update, keeping you prepared for any outdoor activity or
+            travel plan. Experience the power of Weather Report and embrace the
+            convenience of staying connected to the ever-changing atmosphere.
+          </p>
+          <a href="../index.html"
+            ><button class="pulse">Check Weather</button></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <h3 class="footer__title">Contact</h3>
+      <div class="footer__contact">
+        <div class="footer__contact-icons">
+          <a
+            class="footer__contact-icon footer__contact-icon--linked-in"
+            href="https://www.linkedin.com/in/raulcalero/"
+            ><img src="../assets/icons/linked-in-icon.svg"
+          /></a>
+          <a
+            class="footer__contact-icon footer__contact-icon--github"
+            href="https://github.com/TheCaptainKimchi"
+            ><img src="../assets/icons/github-icon.svg"
+          /></a>
+          <a
+            class="footer__contact-icon footer__contact-icon--email"
+            href="mailto:raulcalero7@gmail.com"
+            ><img src="../assets/icons/mail-icon.svg"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <div class="stand-image"></div>
+    <canvas id="bg"></canvas>
+    <script src="../scripts/parallax.js"></script>
+  </body>
+</html>

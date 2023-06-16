@@ -14,8 +14,12 @@
         <h2>Weather Report</h2>
       </div>
       <ul>
-        <li>Home</li>
-        <li>About</li>
+        <a href="./index.html"
+          ><li class="header__list header__list--active">Home</li></a
+        >
+        <a href="./pages/about.html"
+          ><li class="header__list header__list--inactive">About</li></a
+        >
       </ul>
     </header>
     <main id="main">
@@ -30,6 +34,9 @@
             <input type="text" value="Enter Location" name="location" />
             <button class="content__button pulse">Submit</button>
           </form>
+          <button class="content__geolocation">
+            <img src="./assets/icons/geolocation-icon.svg" />
+          </button>
         </div>
       </section>
     </main>

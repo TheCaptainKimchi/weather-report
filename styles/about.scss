@@ -90,11 +90,11 @@ canvas#bg {
 			font-size: 2rem;
 			color: white;
 		}
-	}
 		li:hover {
 			transform: scale(1.1);
 			border-bottom: white 1px solid;
 		}
+	}
 		.header__list--active {
 			font-weight: bold;
 		}
@@ -130,6 +130,7 @@ canvas#bg {
 		}
 	}
 }
+
 
 // ======================================
 // ============= MAIN STYLE =============
@@ -168,64 +169,15 @@ canvas#bg {
 		.content__title {
 			margin: 0;
 			padding: 0.5rem;
+			font-size: 2rem;
 		}
 
 		.content__text {
-			border: 1px silver solid;
-			width: 80%;
 			padding: 1rem;
-			&-quote {
-				margin: 0;
-			}
-			&-author {
-				padding-top: 0.5rem;
-				margin: 0;
-				font-style: italic;
-			}
 		}
-
-
-		.content__form {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			margin-top: 0.5rem;
-			input {
-				background-color: black;
-				border: none;
-				color: white;
-				padding-left: 1rem;
-				border-radius: 8px;
-				width: 75%;
-				height: 1.5rem;
-			}
-			.content__alert {
-				color: red;
-				font-size: 1rem;
-			}
-			button:hover {
-				cursor: pointer;
-			}
-		}
-		.content__geolocation {
-			width: 1.5rem;
-			height: 1.5rem;
-			margin: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			position: absolute;
-			top: 15.3rem;
-			left: 13rem;
-			padding: 0.75rem;
-			img {
-				width: 1.5rem;
-				height: auto;
-				filter: invert(1);
-			}
-		}
-		.content__geolocation:hover {
-			cursor: pointer;
+		a {
+			text-decoration: none;
+			color: white;
 		}
 	  }
 
@@ -277,110 +229,6 @@ canvas#bg {
 			margin-top: 50px;
 		}
 	  }
-}
-
-// +++++++ RELOADED CARD +++++++
-.content__weather {
-		display: flex;
-		align-items: center;
-		justify-content: flex-start;
-		flex-direction: column;
-		position:relative;
-		border-radius:15px;
-		width:300px;
-		height:400px;
-		text-align:center;
-		color: #252B37;
-		background-color: #151823;
-		@include backlight(0, 5vw, 5vw, 0.85, #0fffc1, #7e0fff, 10s);
-		animation: textColor 10s ease infinite;
-		
-		@keyframes textColor {
-		  0% {
-			color: #7e0fff;
-		  }
-		  50% {
-			color: #0fffc1;
-		  }
-		  100% {
-			color: #7e0fff;
-		  }
-		}
-
-		.card__top {
-			display: flex;
-			justify-content: space-evenly;
-			width: 80%;
-			border: 1px silver solid;
-			border-radius: 10px;
-			margin-top: 3rem;
-			.card__icon {
-				display: flex;
-				align-items: center;
-				img {
-					width: 75px;
-					height: 75px;
-					border-radius: 50%;
-				}
-			}
-		}
-		.card__bottom {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			h3, p {
-				margin: 0;
-			}
-
-			h3 {
-				font-size: 1rem;
-				margin-top: 0.5rem;
-				margin-bottom: 1rem;
-			}
-
-			p {
-				margin-top: 0.5rem;
-			}
-			.card__indexes {
-				display: flex;
-				p {
-					margin: 1rem 0.5rem 0 0.5rem;
-				}
-			}
-		}
-		@include tablet {
-			width: 43.75rem;
-			height: 34.375rem;
-			margin-top: 10rem;
-			.card__top {
-				.card__temp {
-					h2 {
-						font-size: 3rem;
-					}
-					h3 {
-						font-size: 2rem;
-					}
-				}
-				.card__icon {
-					img {
-						width: 100px;
-						height: 100px;
-					}
-				}
-			}
-			.card__bottom {
-				h3 {
-					font-size: 2rem;
-					margin-bottom: 0;
-				}
-				p {
-					font-size: 1.5rem;
-				}
-			}
-		}
-		@include desktop {
-				margin-top: 50px;
-		}
 }
 
 // ======================================
@@ -456,6 +304,7 @@ canvas#bg {
 	}
 }
 
+
 // ======================================
 // ============ STAND STYLE =============
 // ======================================
@@ -504,7 +353,7 @@ $colors: (
 }
 
 // Now every button will have different colors as set above. We get to use the same structure, only changing the custom properties.
-button {  
+a button {  
   color: var(--color);
   transition: 0.25s;
   
@@ -516,7 +365,7 @@ button {
 }
 
 // Basic button styles
-button {
+a button {
   background: none;
   border: 2px solid;
   font: inherit;
